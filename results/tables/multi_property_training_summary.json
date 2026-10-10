@@ -1,0 +1,107 @@
+{
+  "peak_load": {
+    "target_column": "Peak Load (N)",
+    "unit": "N",
+    "test_rows": 100,
+    "training_rows": 400,
+    "test_metrics": {
+      "R2": 0.8678500972886407,
+      "MAE": 41.58914125406902,
+      "RMSE": 57.05114354131255
+    },
+    "cross_validation": {
+      "cv_r2_mean": 0.9033391830183218,
+      "cv_r2_std": 0.01876674501388745,
+      "cv_mae_mean": 41.797708913269034,
+      "cv_rmse_mean": 57.00144953718285
+    },
+    "best_cv_rmse": 57.00144953718285,
+    "best_parameters": {
+      "model__subsample": 0.8,
+      "model__n_estimators": 300,
+      "model__min_child_weight": 1,
+      "model__max_depth": 7,
+      "model__learning_rate": 0.03,
+      "model__gamma": 0.3,
+      "model__colsample_bytree": 0.9
+    },
+    "model_path": "models/optimized_xgboost_peak_load.joblib",
+    "baseline_model_paths": {
+      "Linear Regression": "models/linear_regression_peak_load.joblib",
+      "Random Forest": "models/random_forest_peak_load.joblib",
+      "XGBoost": "models/xgboost_peak_load.joblib",
+      "SVR": "models/svr_peak_load.joblib"
+    },
+    "test_predictions_path": "results/tables/peak_load_test_predictions.csv"
+  },
+  "peak_stress": {
+    "target_column": "Peak Stress (kPa)",
+    "unit": "kPa",
+    "test_rows": 100,
+    "training_rows": 400,
+    "test_metrics": {
+      "R2": 0.8723087387720085,
+      "MAE": 1858.1861236979169,
+      "RMSE": 2678.167160306306
+    },
+    "cross_validation": {
+      "cv_r2_mean": 0.9081201008987769,
+      "cv_r2_std": 0.021767709128386763,
+      "cv_mae_mean": 1871.6832467447919,
+      "cv_rmse_mean": 2581.293151340726
+    },
+    "best_cv_rmse": 2581.293151340726,
+    "best_parameters": {
+      "model__subsample": 0.9,
+      "model__n_estimators": 500,
+      "model__min_child_weight": 1,
+      "model__max_depth": 4,
+      "model__learning_rate": 0.03,
+      "model__gamma": 0.3,
+      "model__colsample_bytree": 1.0
+    },
+    "model_path": "models/optimized_xgboost_peak_stress.joblib",
+    "baseline_model_paths": {
+      "Linear Regression": "models/linear_regression_peak_stress.joblib",
+      "Random Forest": "models/random_forest_peak_stress.joblib",
+      "XGBoost": "models/xgboost_peak_stress.joblib",
+      "SVR": "models/svr_peak_stress.joblib"
+    },
+    "test_predictions_path": "results/tables/peak_stress_test_predictions.csv"
+  },
+  "elastic_modulus": {
+    "target_column": "Modulus (MPa)",
+    "unit": "MPa",
+    "test_rows": 100,
+    "training_rows": 400,
+    "test_metrics": {
+      "R2": 0.9449744844551222,
+      "MAE": 146.2233958607992,
+      "RMSE": 234.92812672165752
+    },
+    "cross_validation": {
+      "cv_r2_mean": 0.9402493473869725,
+      "cv_r2_std": 0.024856374178358624,
+      "cv_mae_mean": 162.3368389292399,
+      "cv_rmse_mean": 234.81205200953536
+    },
+    "best_cv_rmse": 234.81205200953536,
+    "best_parameters": {
+      "model__subsample": 0.7,
+      "model__n_estimators": 300,
+      "model__min_child_weight": 3,
+      "model__max_depth": 6,
+      "model__learning_rate": 0.05,
+      "model__gamma": 0.3,
+      "model__colsample_bytree": 0.9
+    },
+    "model_path": "models/optimized_xgboost_elastic_modulus.joblib",
+    "baseline_model_paths": {
+      "Linear Regression": "models/linear_regression_elastic_modulus.joblib",
+      "Random Forest": "models/random_forest_elastic_modulus.joblib",
+      "XGBoost": "models/xgboost_elastic_modulus.joblib",
+      "SVR": "models/svr_elastic_modulus.joblib"
+    },
+    "test_predictions_path": "results/tables/elastic_modulus_test_predictions.csv"
+  }
+}

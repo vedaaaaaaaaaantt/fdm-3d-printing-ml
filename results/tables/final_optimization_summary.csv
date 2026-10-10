@@ -1,0 +1,3 @@
+Result Type,Printer Type,Material,Layer Thickness (mm),Infill Density (%),Infill Pattern,Speed (mm/s),Width (mm),Thickness (mm),Peak Stress (kPa),Peak Stress (MPa),Basis
+ML-Optimized Configuration,closed,PLA+,0.3,80,Quarter Cubic,70,6.173333333333333,3.411666666666667,49535.8125,49.53581237792969,Model prediction
+Best Experimental Configuration,closed,PLA+,0.3,80,Quarter Cubic,50,6.226666666666667,3.463333333333333,52639.06666666667,52.63906666666667,Measured experimental result
